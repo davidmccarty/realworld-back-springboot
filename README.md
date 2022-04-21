@@ -8,19 +8,13 @@
 
 [ReadWorld.io](https://github.com/gothinkster/realworld) backend project using spring boot java using `spring-security`, `spring-data-jpa`
 
-# Insprired by
-
-- [우아한형제들 기술 불로그 | Todo list 만들기는 이제 그만](https://woowabros.github.io/experience/2020/04/14/stop-making-todo-list.html)
-- [우아한형제들 기술 블로그 | Gradle 프로젝트에 JaCoCo 설정하기](https://woowabros.github.io/experience/2020/02/02/jacoco-config-on-gradle-project.html)
-- [우아한형제들 기술 블로그 | 우린 Git-flow를 사용하고 있어요](https://woowabros.github.io/experience/2017/10/30/baemin-mobile-git-branch-strategy.html)
-- [Github | Realworld.io](https://github.com/gothinkster/realworld)
 
 
  # Getting started
 
  ## Build from scratch
  ``` shell
- $ ./gradlew build bootRun
+ $ gradlew build bootRun
  ```
 
  ## Using docker
@@ -28,12 +22,12 @@
  $ docker run --rm -p 8080:8080 ghcr.io/raeperd/realworld-spring-boot-java:master
  ```
 
-- Dockerhub registry is [here](https://hub.docker.com/repository/docker/raeperd/realworld-spring-boot-java)  
+- Dockerhub registry is [here](https://hub.docker.com/repository/docker/raeperd/realworld-spring-boot-java)
 - Container tags are simply branch name of this repository following git-flow strategy
 
 
 
-## How to test 
+## How to test
 
 After run application, you can try one of followings
 
@@ -43,9 +37,9 @@ After run application, you can try one of followings
 $ ./doc/run-api-tests.sh
 ```
 
-### using postman 
+### using postman
 
-Import [`./doc/Conduit.postman_collection.json`](./doc/Conduit.postman_collection.json) in your postman application 
+Import [`./doc/Conduit.postman_collection.json`](./doc/Conduit.postman_collection.json) in your postman application
 
 
 
@@ -69,8 +63,8 @@ More details can be found in [`./doc/README.md`](./doc/README.md) and  [original
   - Except for special spring annotations like `@Service`, `@Repository`, `@Transactional`
   - Prohibit use of lombok in domain package
 - Try to follow all modern best practices for spring-boot project
-  
-## Diagrams 
+
+## Diagrams
 
 - You can open full diagram file in [`realworld.drawio`](./realworld.drawio) using [draw.io](https://app.diagrams.net/)
 
@@ -89,13 +83,13 @@ More details can be found in [`./doc/README.md`](./doc/README.md) and  [original
 - Try to reduce number of repositories.
 - Prefer `@JoinTable` to `@JoinColumn`
 
-### JWT 
+### JWT
 
 ![realworld-Jwt](./doc/image/realworld-Jwt.png)
 
 - Try not to use 3rd party library
 - Serialization and Deserialization are seperated with interfaces
-- Domain package contains interface, infrastructure code provide implementation  
+- Domain package contains interface, infrastructure code provide implementation
 - Application package do stuff with spring-security logic
 
 ## Performance
@@ -119,7 +113,6 @@ You can contact me with [email](raeperd117@gmail.com) or issue in this project
 
 # Referenced
 
-- [JSON Web Token Introduction - jwt.io](https://jwt.io/introduction)  
+- [JSON Web Token Introduction - jwt.io](https://jwt.io/introduction)
 - [Symmetric vs Asymmetric JWTs. What is JWT? | by Swayam Raina | Noteworthy - The Journal Blog](https://blog.usejournal.com/symmetric-vs-asymmetric-jwts-bd5d1a9567f6)
 - [presentations/auth.md at master · alex996/presentations · GitHub](https://github.com/alex996/presentations/blob/master/auth.md)
-

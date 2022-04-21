@@ -9,7 +9,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
-import java.util.Collections;
 import java.util.stream.Stream;
 
 import static io.github.raeperd.realworld.domain.user.UserTestUtils.databaseUser;

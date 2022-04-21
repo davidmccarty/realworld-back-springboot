@@ -2,6 +2,7 @@ package io.github.raeperd.realworld.infrastructure.jwt;
 
 import org.junit.jupiter.api.Test;
 
+import java.nio.charset.Charset;
 import java.util.Random;
 
 import static io.github.raeperd.realworld.infrastructure.jwt.Base64URL.base64URLFromString;
@@ -34,7 +35,29 @@ class Base64URLTest {
     private String generateRandomString() {
         final var bytes = new byte[7];
         new Random().nextBytes(bytes);
-        return new String(bytes);
+        // return new String(bytes);
+        String randomString
+            = new String(bytes, Charset.forName("UTF-8"));
+
+        // Create a StringBuffer to store the result
+        StringBuffer r = new StringBuffer();
+
+        // Append first 20 alphanumeric characters
+        // from the generated random String into the result
+        for (int k = 0; k < randomString.length(); k++) {
+
+            char ch = randomString.charAt(k);
+
+            if (((ch >= 'a' && ch <= 'z')
+                 || (ch >= 'A' && ch <= 'Z')
+                 || (ch >= '0' && ch <= '9'))
+                ) {
+                r.append(ch);
+            }
+        }
+
+        // return the resultant string
+        return r.toString();
     }
 
 }
